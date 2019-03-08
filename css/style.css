@@ -34,10 +34,6 @@ h6 {
     margin: 0 0 5px 0;
 }
 
-.mt-50 {
-    margin-top: 50px;
-}
-
 .pr-5 {
     padding-right: 5px;
 }
@@ -191,7 +187,6 @@ ul.top-right .book--btn:hover {
     align-self: center;
     font-family: 'Montez', cursive;
     font-size: 90px;
-    transition: .3s;
 }
 
 .footer-logo {
@@ -231,7 +226,6 @@ ul.top-right .book--btn:hover {
 
 #menu-nav.sticky .logo {
     font-size: 40px;
-    transition: .3s;
 }
 
 #menu-nav.sticky a {
@@ -240,7 +234,7 @@ ul.top-right .book--btn:hover {
 
 ul#menu-list {
     display: grid;
-    grid-column: 6 / 11;
+    grid-column: 5 / 11;
     grid-gap: 10px;
     padding: 0;
     margin: 0;
@@ -265,6 +259,7 @@ ul#menu-list {
 #menu-list a.active {
     color: #ffc600;
     text-shadow: 1px 1px 1px rgba(1, 0, 0, 0.1);
+    transition: .4s;
 }
 
 #menu-list a.active::after {
@@ -285,14 +280,16 @@ ul#menu-list {
     left: 0;
     top: 0;
     right: 0;
-    bottom: -10px;
-    border-bottom: 2px solid var(--yellow);
+    bottom: 0;
+    border-bottom: 3px solid var(--yellow);
     transition: .4s;
-    width: 0%;
+    height: 0%;
+    opacity: 0;
 }
 
 #menu-list a:hover::after {
-    width: 100%;
+    height: 53px;
+    opacity: 1;
 }
 
 [aria-controls="menu-list"] {
@@ -347,6 +344,9 @@ ul#menu-list {
 .text-container p {
     font-size: 50px;
     margin: 15px 0;
+}
+.btn-wrapper {
+    margin-top: 50px;
 }
 
 
@@ -521,7 +521,7 @@ ul#menu-list {
     -moz-box-shadow: inset 0px 0px 13px 4px rgba(0, 0, 0, 0.28);
     box-shadow: inset 0px 0px 13px 4px rgba(0, 0, 0, 0.28);
     position: relative;
-    min-height: 900px;
+    min-height: 1000px;
 }
 
 .contact::after {
@@ -533,7 +533,7 @@ ul#menu-list {
     opacity: .7;
     background-color: black;
     width: 100%;
-    min-height: 900px;
+    min-height: 1000px;
 }
 
 .form-headline {
@@ -1012,44 +1012,7 @@ label[for=comments] {
     letter-spacing: 1px;
     color: #828282;
 }
-
-@media (max-width: 1000px) {
-    .menu {
-        order: -1;
-        perspective: 800px;
-    }
-    [aria-controls="menu-list"] {
-        display: block;
-        margin-bottom: 10px;
-    }
-    .menu ul {
-        max-height: 0;
-        overflow: hidden;
-        transform: rotateX(90deg);
-        transition: all 0.5s;
-    }
-    [aria-expanded="true"]~ul {
-        display: grid;
-        max-height: 500px;
-        transform: rotateX(0);
-    }
-    [aria-expanded="false"] .close {
-        display: none;
-    }
-    [aria-expanded="true"] .close {
-        display: inline-block;
-    }
-    [aria-expanded="true"] .open {
-        display: none;
-    }
-}
-                                                    
-@media (max-width: 700px) {
-    /* About */
-    .about {
-        grid-template-columns: 1fr;
-    }
-}
+                                                
 
 @media (max-width: 500px) {}
 /* animated headlines */

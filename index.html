@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ivomir Stanchev | [in]ivomirs">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
 
-
-    <title>Responsive Website!</title>
+    <title>Bongo - One Page Site</title>
 </head>
 
 <body>
     <div class="wrapper">
         <!-- header and navigation -->
         <header>
-            <nav class="menu">
+            <nav id="nav" class="menu">
                 <div id="menu-top">
                     <div class="top-left">
                         <a href="mailto:info@restaurant.com"><span><i class="fas fa-envelope pr-5"></i>info@restaurant.com</span></a>
@@ -37,7 +38,7 @@
                     </div>
                     <ul id="menu-list">
                         <li>
-                            <a href="#menu-top" class="m-home active">Home</a>
+                            <a href="#nav" class="m-home active">Home</a>
                         </li>
                         <li>
                             <a href="#storySection" class="m-about">About</a>
@@ -72,7 +73,7 @@
                                 </span>
                             </h1>
                         </div>
-                        <div class="mt-50"><a href="#menuListSection"  class="btn book--btn-ghost">menu</a></div>
+                        <div class="btn-wrapper"><a href="#menuListSection"  class="btn book--btn-ghost">menu</a></div>
                     </div>
                 </div>
             </div>
@@ -170,7 +171,7 @@
                     <div class="menu-list-headline"><h2>Menu's most wanted</h2></div>
                     <div class="ml-item menu-list-item-1">
                         <div class="pizza-thumb pizza-img-1"></div>
-                        <div>
+                        <div class="pizza-ingr">
                             <h3>Margherita Pizza</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime tenetur provident adipisci cumque consectetur incidunt vel. </p>
                         </div>
@@ -178,7 +179,7 @@
                     </div>
                     <div class="ml-item menu-list-item-2">
                         <div class="pizza-thumb pizza-img-2"></div>
-                        <div>
+                        <div class="pizza-ingr">
                             <h3>Prosciutto Rocket</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime tenetur provident adipisci cumque consectetur incidunt vel. </p>
                         </div>
@@ -186,7 +187,7 @@
                     </div>
                     <div class="ml-item menu-list-item-3">
                         <div class="pizza-thumb pizza-img-3"></div>
-                        <div>
+                        <div class="pizza-ingr">
                             <h3>Grana Cheese Pizza</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime tenetur provident adipisci cumque consectetur incidunt vel. </p>
                         </div>
@@ -194,27 +195,27 @@
                     </div>
                     <div class="ml-item menu-list-item-4">
                         <div class="pizza-thumb pizza-img-4"></div>
-                        <div>
-                            <h3>Tuna and Onion Pizza</h3>
+                        <div class="pizza-ingr">
+                            <h3>Tuna and Onion</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime tenetur provident adipisci cumque consectetur incidunt vel. </p>
                             </div>
                         <div class="ml-price">$13.99</div>
                     </div>
                     <div class="ml-item menu-list-item-5">
-                            <div class="pizza-thumb pizza-img-5"></div>
-                            <div>
-                                <h3>Blue Cheese Prosciutto Pizza</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime tenetur provident adipisci cumque consectetur incidunt vel.</p>
-                            </div>
-                            <div class="ml-price">$12.99</div>
+                        <div class="pizza-thumb pizza-img-5"></div>
+                        <div class="pizza-ingr">
+                            <h3>Blue Cheese Pizza</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime tenetur provident adipisci cumque consectetur incidunt vel.</p>
+                        </div>
+                        <div class="ml-price">$12.99</div>
                     </div>
                     <div class="ml-item menu-list-item-6">
-                            <div class="pizza-thumb pizza-img-6"></div>
-                            <div>
-                                <h3>Pizza Ortolana</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime tenetur provident adipisci cumque consectetur incidunt vel. </p>
-                            </div>
-                            <div class="ml-price">$12.99</div>
+                        <div class="pizza-thumb pizza-img-6"></div>
+                        <div class="pizza-ingr">
+                            <h3>Pizza Ortolana</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime tenetur provident adipisci cumque consectetur incidunt vel. </p>
+                        </div>
+                        <div class="ml-price">$12.99</div>
                     </div>
                 </div>
             </section>
