@@ -1,0 +1,138 @@
+/* animated headlines */
+
+.cd-title h1 {
+    font-size: 2rem;
+}
+
+.cd-filter,
+.cd-intro {
+    width: 100%;
+    text-align: center;
+}
+
+.cd-headline {
+    font-size: 70px;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.cd-words-wrapper {
+    width: 200px;
+    height: 80px;
+}
+
+.cd-words-wrapper {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+
+.cd-words-wrapper b {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+}
+
+.cd-words-wrapper b.is-visible {
+    position: relative;
+}
+ /* -------------------------------- 
+  xloading-bar 
+  -------------------------------- */
+                                                    
+.cd-headline.loading-bar span {
+    display: inline-block;
+}
+
+.cd-headline.loading-bar .cd-words-wrapper {
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.cd-headline.loading-bar .cd-words-wrapper::after {
+    /* loading bar */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #E6D925;
+    z-index: 2;
+    transition: width 0.3s -0.1s;
+}
+
+.cd-headline.loading-bar .cd-words-wrapper.is-loading::after {
+    width: 100%;
+    transition: width 3s;
+}
+
+.cd-headline.loading-bar b {
+    top: .2em;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cd-headline.loading-bar b.is-visible {
+    opacity: 1;
+    top: 0;
+}
+/* -------------------------------- 
+  xslide 
+  -------------------------------- */
+                                                    
+.cd-headline.slide span {
+    display: inline-block;
+}
+
+.cd-headline.slide .cd-words-wrapper {
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.cd-headline.slide b {
+    opacity: 0;
+    top: .2em;
+}
+
+.cd-headline.slide b.is-visible {
+    top: 0;
+    opacity: 1;
+    animation: slide-in 0.6s;
+}
+
+.cd-headline.slide b.is-hidden {
+    animation: slide-out 0.6s;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(120%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
